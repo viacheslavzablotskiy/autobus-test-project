@@ -1,0 +1,131 @@
+@use "sass:color";
+
+.group__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;   
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: transform 1s ease-in-out;
+
+
+    &.group__menu--open {
+        transform: translateX(0);
+    }
+
+    &.group__menu--close { 
+        transform: translateX(-100%); 
+    }
+
+    .group__menu__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 0.5px solid rgb(235, 234, 234);
+
+        h3 {
+            color: black;
+            padding-left: 15px;
+        }
+
+        button {
+            border: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            padding: 15px 10px;
+
+            .MuiSvgIcon-root {
+
+                &:hover {
+                    background-color: color.adjust(white, $lightness: -15%);
+                }
+            }
+
+        }
+    }
+
+    .group__list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap:  10px;
+        text-decoration: none;
+        width: 100%;
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            input {
+                height: 32px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background: rgb(237, 235, 235);
+                color: black;
+                padding-left: 12px;
+            }
+
+
+            button {
+             background: none;
+             border: 0.5px solid rgb(209, 207, 207);
+             height: 34px;
+             border-radius: 4px;
+             padding-top: 4px;
+
+             &:hover {
+               background-color: color.adjust(white, $lightness: -15%);
+             }
+            }
+        }
+    }
+
+    .group__menu__toggle {
+        width: 100%;
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        box-sizing: border-box;
+        padding-right: 28px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+
+        .add__group__button,
+        .save__group__button {
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: none;
+            background: rgb(73, 73, 242);
+            color: white;
+            font-weight: bolder;
+
+            &:hover {
+                background-color: color.adjust(blue, $lightness: -15%);
+            }
+        }
+
+
+        .add__group__button {
+            background-color: white;
+            color: rgb(73, 73, 242);
+
+            &:hover {
+                background-color: color.adjust(white, $lightness: -15%);
+            }
+        }
+    }
+}

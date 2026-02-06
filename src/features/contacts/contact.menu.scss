@@ -1,0 +1,171 @@
+@use "sass:color";
+
+.contact__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;   
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: transform 1s ease-in-out;
+
+    &.contact__menu--open {
+        transform: translateX(0);
+    }
+
+    &.contact__menu--close { 
+        transform: translateX(-100%); 
+    }
+
+
+    .contact__menu__header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid rgb(235, 234, 234);
+
+        h3 {
+            color: black;
+            padding-left: 15px;
+        }
+
+        .group__menu__back__button {
+            border: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            padding-right: 15px;
+            
+
+            .MuiSvgIcon-root {
+
+                &:hover {
+                    background-color: color.adjust(white, $lightness: -15%);
+                }
+            }
+        }
+    }
+
+    .contact__form {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        margin: 16px 0;
+
+        .form__input {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            appearance: none; 
+
+
+            p {
+                width: 80%;
+                margin: 0;
+                padding: 0;
+                color: red;
+            }
+
+            input, .custom__select, .select__trigger {
+                width: 80%;
+                height: 32px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background: rgb(237, 235, 235);
+                color: rgb(110, 108, 108);
+                padding-left: 12px;
+                box-sizing: border-box;
+            }
+            
+            .custom__select {
+                padding: 0;
+                
+                .select__trigger {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0;
+                    box-sizing: border-box;
+
+                    p {
+                        padding-left: 10px;
+                        font-size: 14px;
+                        color: rgb(110, 108, 108);
+                    }
+                }
+
+                .options__list {
+                    width: 100%;
+                    display: flex;
+                    margin-top: 9px;
+                    padding: 0;
+                    text-decoration: none;
+                    flex-direction: column;
+                    border: none;
+                    border-radius: 5px;
+                    background: rgb(237, 235, 235);
+                    box-sizing: border-box;
+                    list-style-type: none;
+                    
+                    
+                    li {
+                        width: 100%;
+                        color: black;
+                        padding: 10px 10px;
+                        box-sizing: border-box;
+                        font-size: 13px;
+                        &:hover {
+                            background-color: color.adjust(white, $lightness: -15%);
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .form__input:has(p) {
+            input {
+                border: 1px solid red;
+            }
+        }
+
+        .contact__menu__toggle {
+            margin-top: auto;
+            align-self: flex-end;
+            padding: 30px;
+
+            button {
+                padding: 10px 12px;
+                border-radius: 6px;
+                border: none;
+                background: rgb(73, 73, 242);
+                color: white;
+                font-weight: bolder;
+
+                &:hover {
+                    background-color: color.adjust(blue, $lightness: -15%);
+                }
+            }   
+        }
+
+    }
+
+}
+
+
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px rgb(237, 235, 235) inset;
+    box-shadow: 0 0 0px 1000px rgb(237, 235, 235) inset;
+    -webkit-text-fill-color: rgb(110, 108, 108); }
