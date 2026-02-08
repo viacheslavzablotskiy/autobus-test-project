@@ -66,7 +66,7 @@ export const GroupMenu: React.FC<GroupMenuPropsType> = ({ onRequestCreateGroup, 
                 <li key={group.id}>
                     <input type="text" value={group.name} onChange={(e) => { handleChangeLocalState(group.id, e.target.value) }} placeholder="Введите название" />
                     <button className="delete-group-icon" onClick={() => { onRequestDeleteGroup(group) }}>
-                        <DeleteOutlinedIcon fontSize="medium" sx={{ color: 'grey' }} />
+                        <DeleteOutlinedIcon fontSize="medium" sx={{ color: 'grey'}} />
                     </button>
                 </li>
             ))}

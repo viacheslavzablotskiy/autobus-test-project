@@ -4,7 +4,7 @@ import { selectAllContact, type ContactDataType } from '../contacts/contact.slic
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import { useAppSelector } from "../../store/main.hooks";
 import { selectGroupAll, type GroupDataType } from '../group/group.slice'
-import { PhoneInput } from "../shared/components/phone.input";
+import { PhoneInput } from "./phone.input";
 import './contact.menu.scss'
 import { useEffect, useState } from "react";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';

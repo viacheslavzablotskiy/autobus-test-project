@@ -54,3 +54,26 @@
     align-items: center;
     
 }
+
+@media (max-width: 768px) {
+
+    .main__page {
+        grid-template-areas: "header"
+                        "add__contact__button"
+                         "main-page";
+        grid-template-rows: auto auto 1fr;
+        gap: 20px;
+        
+        .header__button--mobile {
+            grid-area: add__contact__button;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .group__section {
+            width: 80%;
+        }
+
+    }
+}

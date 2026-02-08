@@ -2,7 +2,7 @@ import IMask from 'imask'
 import type React from 'react'
 import { useEffect, useRef } from 'react'
 import type { UseFormRegister } from 'react-hook-form'
-import type { ContactDataType } from '../../contacts/contact.slice'
+import type { ContactDataType } from './contact.slice'
 
 export type PhoneInputProp = {
     register: UseFormRegister<Omit<ContactDataType, 'id'>>

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
     width: 300px;
     height: 100%;
     background-color: white;
@@ -14,8 +14,8 @@
         transform: translateX(0);
     }
 
-    &.contact__menu--close { 
-        transform: translateX(-100%); 
+    &.contact__menu--close {
+        transform: translateX(-100%);
     }
 
 
@@ -39,7 +39,7 @@
             padding: 0;
             cursor: pointer;
             padding-right: 15px;
-            
+
 
             .MuiSvgIcon-root {
 
@@ -66,7 +66,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            appearance: none; 
+            appearance: none;
 
 
             p {
@@ -76,7 +76,9 @@
                 color: red;
             }
 
-            input, .custom__select, .select__trigger {
+            input,
+            .custom__select,
+            .select__trigger {
                 width: 80%;
                 height: 32px;
                 border: none;
@@ -87,10 +89,16 @@
                 padding-left: 12px;
                 box-sizing: border-box;
             }
-            
+
+            input {
+                &:hover {
+                    border: 1px solid rgb(51, 26, 239);
+                }
+            }
+
             .custom__select {
                 padding: 0;
-                
+
                 .select__trigger {
                     width: 100%;
                     display: flex;
@@ -119,21 +127,22 @@
                     background: rgb(237, 235, 235);
                     box-sizing: border-box;
                     list-style-type: none;
-                    
-                    
+
+
                     li {
                         width: 100%;
                         color: black;
                         padding: 10px 10px;
                         box-sizing: border-box;
                         font-size: 13px;
+
                         &:hover {
                             background-color: color.adjust(white, $lightness: -15%);
                         }
                     }
                 }
             }
-            
+
         }
 
         .form__input:has(p) {
@@ -158,7 +167,7 @@
                 &:hover {
                     background-color: color.adjust(blue, $lightness: -15%);
                 }
-            }   
+            }
         }
 
     }
@@ -166,6 +175,8 @@
 }
 
 
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px rgb(237, 235, 235) inset;
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(237, 235, 235) inset;
     box-shadow: 0 0 0px 1000px rgb(237, 235, 235) inset;
-    -webkit-text-fill-color: rgb(110, 108, 108); }
+    -webkit-text-fill-color: rgb(110, 108, 108);
+}

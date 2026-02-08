@@ -85,7 +85,11 @@
              padding-top: 4px;
 
              &:hover {
-               background-color: color.adjust(white, $lightness: -15%);
+               background-color: color.adjust(rgb(239, 62, 62), $lightness: -15%);
+
+               .MuiSvgIcon-root {
+                        color: white;
+                }
              }
             }
         }

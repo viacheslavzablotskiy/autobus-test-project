@@ -4,9 +4,9 @@
   font-style: normal;
 }
 
-html {
+/* html {
   scrollbar-gutter: stable;
-}
+} */
 
 html, body, #root { 
   height: 100%;
