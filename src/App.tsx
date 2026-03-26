@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useAppDispatch } from './store/main.hooks'
 import { HeaderSite } from './features/shared/header.site'
 import { createNewGroups, deleteGroup, updateGroups, type GroupDataType } from './features/group/group.slice'
